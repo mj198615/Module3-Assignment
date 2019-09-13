@@ -1,18 +1,14 @@
-
-<!DOCTYPE html>
-<html lang="en" ng-app="NarrowItDownApp">
-head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<body>
-{{item.name}}
-{{item.short_name}}
-{{item.description}}
-<input type="button" ng-click="menu.onRemove({index: $index})" class="btn btn-lg btn-primary" value="Don't want this one!">
-{{menu.onEmpty}}
-
-</body>
-
-</html>
+<div class="row">
+    <div ng-repeat="item in menu.foundItems">
+        <div class="clearfix" ng-if="$index % 2 == 0"></div>
+        <div class="col-md-6">
+            <div class="jumbotron">
+                <h2>{{item.name}}</h2>
+                <h3>{{item.short_name}}</h3>
+                <p>{{item.description}}</p>
+                <input type="button" ng-click="menu.onRemove({index: $index})" class="btn btn-lg btn-primary" value="Don't want this one!">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="alert alert-danger" role="alert" ng-show="menu.onEmpty">{{menu.onEmpty}}</div>
