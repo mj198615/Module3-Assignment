@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Narrow Down Your Menu Choice</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
  <script src="angular.min.js"></script>
@@ -17,9 +16,9 @@
 <body>
     <center>
         <div class="container" ng-controller="NarrowItDownController as menu">
-            <h1 style = "text-align: center; color: green; margin-top: 20%">Chinese Menu Choice Narrow Down!</h1>
+            <h1 >Narrow Down Your Chinese Menu Choice</h1>
             <div class="search">
-                <input type="text" placeholder="Search term" style = "text-align: center;" class="form-control" ng-model="menu.shortName">
+                <input type="text" placeholder="Search term"  class="form-control" ng-model="menu.shortName">
                 <div class="narrow-button">
                     <button class="btn btn-primary" ng-click="menu.matchedMenuItems(menu.shortName)">Narrow It Down!</button>
                 </div>
